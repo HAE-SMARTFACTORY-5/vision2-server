@@ -1,5 +1,6 @@
-class MyIngredientResponse:
-    def __init__(self, ingredientId: int, name: str, image: str):
-        self.ingredientId = ingredientId
-        self.name = name
-        self.image = image
+from pydantic import BaseModel
+
+class MyIngredientResponse(BaseModel):
+    ingredientId: int
+    name: str
+    image: str
