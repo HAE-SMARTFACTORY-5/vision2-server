@@ -1,7 +1,7 @@
 from fastapi import HTTPException
 import mysql.connector
 from dto.myIngredient import MyIngredientResponse
-from db.database import getDbConnection
+from infra.database import getDbConnection
 
 
 def findAll():

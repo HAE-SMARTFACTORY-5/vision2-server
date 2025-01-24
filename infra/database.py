@@ -1,6 +1,6 @@
 import mysql.connector
 import os
-from fastapi import FastAPI, HTTPException
+from fastapi import HTTPException
 from dotenv import load_dotenv
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
