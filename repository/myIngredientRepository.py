@@ -1,7 +1,7 @@
 from fastapi import HTTPException
 import mysql.connector
 from dto.myIngredient import MyIngredientResponse
-from db.database import get_db_connection
+from db.database import getDbConnection
 
 
 def findAll():
@@ -12,12 +12,12 @@ def findAll():
         ORDER BY my_ingredient.created_at DESC
     '''
     try:
-        connection = get_db_connection()
+        connection = getDbConnection()
         cursor = connection.cursor(dictionary=True)
 
         cursor.execute(query)
         results = cursor.fetchall()
-        
+
         return [
             MyIngredientResponse(
                 ingredientId=row['ingredient_id'], 

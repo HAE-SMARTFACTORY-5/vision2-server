@@ -1,4 +1,4 @@
-from repository.myIngredientRepository import findAll
+from repository import myIngredientRepository
 
 def findAllMyIngredient():
-    return findAll()
+    return myIngredientRepository.findAll()

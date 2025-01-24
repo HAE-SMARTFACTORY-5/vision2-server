@@ -14,7 +14,7 @@ db_config = {
     'database': os.environ["DB_DATABASE"]
 }
 
-def get_db_connection():
+def getDbConnection():
     try:
         connection = mysql.connector.connect(**db_config)
         return connection
