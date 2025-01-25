@@ -22,7 +22,6 @@ def findAll():
             MyIngredientResponse(
                 ingredientId=row['ingredient_id'], 
                 name=row['name'],
-                image=row['image'],
             ) for row in results
         ]
     except mysql.connector.Error as e:
